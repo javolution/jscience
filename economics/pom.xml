@@ -1,0 +1,36 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ======================================================= -->
+    <!--   Artifact Coordinates                                  -->
+    <!-- ======================================================= -->
+    <parent>
+        <groupId>org.jscience</groupId>
+        <artifactId>jscience</artifactId>
+        <version>5.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>jscience-economics</artifactId>
+    <name>JScience Economics Bundle</name>
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <!-- ======================================================= -->
+            <!--     OSGi Packaging                                      -->
+            <!-- ======================================================= -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Export-Package>!org.jscience.economics.internal.*,org.jscience.economics.*</Export-Package>
+                        <Private-Package>org.jscience.economics.internal.*</Private-Package>
+                        <Bundle-Activator>org.jscience.economics.internal.osgi.BundleActivatorImpl</Bundle-Activator>
+                        <Export-Service></Export-Service>  <!-- No service API -->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>

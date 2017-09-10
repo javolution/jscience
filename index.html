@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+   <TITLE>JScience</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+   <META NAME="description" CONTENT="The most comprehensive Java library for the scientific community.">
+   <META NAME="keywords" CONTENT="java, science, sciences, scientific, library, open-source, module, plugin">
+   <LINK HREF="doc/index.css" TYPE="text/css" REL="stylesheet">
+</HEAD>
+<BODY>
+<TABLE HEIGHT="189" BORDER="0" CELLSPACING="0"
+       BACKGROUND="doc/img/topbar_bg.gif" CELLPADDING="0" WIDTH="100%">
+   <TR>
+   <TD VALIGN="middle" ALIGN="center">
+   <TABLE HEIGHT="189" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+          WIDTH="719">
+      <TR>
+      <TD WIDTH="32">
+      <IMG HEIGHT="189" SRC="doc/img/header_leftbar.gif" WIDTH="32"></TD>
+      <TD BGCOLOR="#FFFFFF" VALIGN="top" WIDTH="650">
+      <TABLE CLASS="smalltext" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+             WIDTH="100%">
+         <TR>
+         <TD HEIGHT="17">
+         <IMG HEIGHT="17" SRC="doc/img/header_topslab.gif" WIDTH="651"></TD>
+         </TR>
+         <TR>
+         <TD VALIGN="bottom" HEIGHT="99">
+         <IMG HEIGHT="99" SRC="doc/img/main_header.jpg" WIDTH="651"></TD>
+         </TR>
+         <TR>
+         <TD VALIGN="top" HEIGHT="60" BACKGROUND="doc/img/quotebg.gif">
+         <TABLE HEIGHT="59" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="top" HEIGHT="46">
+            <TABLE ALIGN="center" HEIGHT="52" BORDER="0" CELLSPACING="0"
+                   CELLPADDING="4" WIDTH="89%">
+               <TR>
+               <TD HEIGHT="40"><SPAN CLASS="lineheight1 style3">
+               <I>The hardest thing in the world to understand is the income tax</I>
+               (Albert Einstein)</SPAN></TD>
+               </TR>
+            </TABLE></TD>
+            </TR>
+         </TABLE></TD>
+         </TR>
+      </TABLE></TD>
+      <TD WIDTH="37">
+      <DIV ALIGN="right"><IMG HEIGHT="189" SRC="doc/img/header_rightbar.gif"
+                              WIDTH="36"></DIV></TD>
+      </TR>
+   </TABLE></TD>
+   </TR>
+</TABLE>
+<TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="719">
+   <TR>
+   <TD VALIGN="top" HEIGHT="379" BACKGROUND="doc/img/body_bgleft.gif"
+       WIDTH="10">
+   <IMG HEIGHT="2" SRC="doc/img/body_bgleft.gif" WIDTH="10"></TD>
+   <TD BGCOLOR="#FFFFFF" VALIGN="top" WIDTH="698">
+   <TABLE HEIGHT="358" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+          WIDTH="103%">
+      <TR>
+      <TD BACKGROUND="doc/img/whitelineleft.gif" WIDTH="22">
+      <IMG HEIGHT="1" SRC="doc/img/whitelineleft.gif" WIDTH="22"></TD>
+      <TD VALIGN="top" WIDTH="651">
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">Our Vision
+            </SPAN></TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+
+<!-- Our Vision -->
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="93%">
+         <TR>
+         <TD>
+         <UL>
+            <LI CLASS="lineheight1 style5">To provide the most
+            comprehensive Java<SUP>TM</SUP> library for the scientific
+            community.</LI>
+            <LI CLASS="lineheight1 style5">To create synergy between all
+            sciences (e.g. math, physics, sociology, biology, astronomy,
+            economics, etc.) by integrating them into a single architecture.
+            </LI>
+            <LI CLASS="lineheight1 style5">To provide the best on-line
+            services (webstart) for scientific calculations and
+            visualizations.</LI>
+         </UL></TD>
+         </TR>
+      </TABLE>
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">Current
+            Library Modules </SPAN></TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+
+<!-- Modules -->
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="93%">
+         <TR>
+         <TD CLASS="lineheight1 style5">
+         <UL>
+            <LI> Implementation of <A HREF="http://www.unitsofmeasurement.org/">unitsofmeasurement.org</A> services</LI>
+
+            <LI> A<A HREF="api/org/jscience/geography/coordinates/package-summary.html#package_description">
+            coordinates</A> module compliant with
+            <a href="http://www.opengeospatial.org/">OGC</a>/<a href="http://www.isotc211.org/">ISO</a>
+	        specifications for the development and deployment of geographic applications.</LI>
+
+            <LI>A rigourous mapping of mathematical
+            <A HREF="api/org/jscience/mathematics/structure/package-summary.html#package_description">structures</A>
+            (e.g. <SPAN CLASS="style6">Group, Ring, Field, VectorSpace </SPAN>) to Java interfaces.</LI>
+
+            <LI>A <A HREF="api/org/jscience/mathematics/vector/package-summary.html#package_description">
+            linear algebra</A> module, which includes a first <I>(and I believe unique) </I>
+            parameterized <A HREF="api/org/jscience/mathematics/vector/Matrix.html">matrix</A>
+            class capable of resolving linear system of equations involving
+            any kind of elements (e.g. <SPAN CLASS="style6">Complex, ModuloInteger, RationalFunctions</SPAN>)</LI>
+
+            <LI> A <A HREF="api/org/jscience/mathematics/function/package-summary.html#package_description">functions</A>
+            module for symbolic calculations and analysis.</LI>
+
+            <LI> Different types of  <A HREF="api/org/jscience/mathematics/number/package-summary.html#package_description">numbers</A>
+            such as <A HREF="api/org/jscience/mathematics/number/Real.html">real</A>
+            numbers of arbitrary and guaranteed precision, or the always
+            exact <A HREF="api/org/jscience/mathematics/number/Rational.html">rational</A>
+            numbers.</LI>
+
+            <LI> Support for exact or arbitrary precision
+            <A HREF="api/org/jscience/physics/amount/package-summary.html#package_description">measurements</A>
+            (also strongly typed).</LI>
+
+            <LI> Support for <SPAN CLASS="style6">Standard , Relativistic ,
+            High-Energy , Quantum and Natural </SPAN>physical
+            <A HREF="api/org/jscience/physics/model/package-summary.html#package_description">models</A>.
+            </LI>
+
+            <LI> A <A HREF="api/org/jscience/economics/money/package-summary.html#package_description">monetary</A> module
+             for precision-guaranteed calculations and currencies conversions.</LI>
+
+         </UL></TD>
+         </TR>
+      </TABLE>
+
+<!-- Version -->
+      <TABLE CLASS="border1" ALIGN="center" HEIGHT="24" BORDER="0"
+             CELLSPACING="0" CELLPADDING="8" WIDTH="86%">
+         <TR>
+         <TD BACKGROUND="doc/img/quotebg.gif">
+         <DIV ALIGN="center"><SPAN CLASS="style7">
+                 <IMG src="doc/img/inprogress.jpg" /><B>JS</B>cience version 5.0 migration to <A href="http://java.net/projects/jscience">java.net</A> started (to be completed by the end of the week)</SPAN></DIV></TD>
+         </TR>
+         <TR>
+         <TD>
+         <TABLE BGCOLOR="#FFFFFF" BORDER="0" CELLSPACING="4" CELLPADDING="4"
+                WIDTH="100%">
+            <TR BACKGROUND="doc/img/bar_center.jpg">
+            <TD BGCOLOR="#F3F5F8" WIDTH="33%">
+            <DIV ALIGN="center"><A HREF="api/index.html">API (not updated yet)</A></DIV>
+            </TD>
+            <TD BGCOLOR="#F3F5F8" WIDTH="33%">
+            <DIV ALIGN="center"> <A HREF="http://java.net/projects/jscience">Development
+               </A></DIV></TD>
+            <TD BGCOLOR="#F3F5F8" WIDTH="34%">
+            <DIV ALIGN="center"> <A HREF="https://maven.java.net/index.html">Maven Repository</A></DIV></TD>
+            </TR>
+         </TABLE></TD>
+         </TR>
+         <TR>
+         <TD BACKGROUND="doc/img/quotebg.gif">
+         <DIV ALIGN="center"><SPAN CLASS="style7">
+         A JRE 1.4 compatible binary is
+         also available <A HREF="jscience-vm14.jar">here</A> (Version 3.2.0)
+      </SPAN></DIV></TD>
+         </TR>
+      </TABLE>
+      <BR>
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">Usage</SPAN>
+            </TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+
+<!-- Usage -->
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="85%">
+         <TR>
+
+         <TD CLASS="lineheight1 style5">
+       <P><A HREF="api/overview-summary.html#TUTORIAL">Tutorial and Code Examples</A></P>
+       <P><B>JS</B>cience is <A HREF="http://javolution.org"><IMG
+            HEIGHT="32" SRC="doc/img/javolution.png" WIDTH="144"></A> for:
+         </P>
+         <UL>
+            <LI><A href="http://javolution.org/api/javolution/context/ConcurrentContext.html">Low-Level Concurrency:</A>
+            To take advantage of multi-core processors automatically.
+            Our <A HREF="doc/benchmark.html">benchmark</A> indicates that on a dual-processors
+            our <code>Matrix&lt;Float64&gt;</code> or <code>Matrix&lt;Complex&gt;</code> multiplications
+            are the fastest around (for a pure Java library).</LI>
+            <LI><A href="http://javolution.org/api/javolution/context/StackContext.html">Stack allocation:</A>
+            To reduce garbage collection, decrease memory footprint and increase scalability.</LI>
+            <LI><A href="http://javolution.org/api/javolution/util/package-summary.html#package_description">Real-Time Behavior and Compliance:</A>
+            <B>JS</B>cience can safely be used with
+            <A HREF="http://rtsj.org">RTSJ</A> VMs without resulting into memory clashes or illegal access exceptions.</LI>
+            <LI><A href="http://javolution.org/api/javolution/xml/package-summary.html#package_description">Persistency/Networking:</A>
+            Fastest XML marshalling/unmarshalling around!</LI>
+            <LI>Easy and type-safe configuration management with the <A href="http://javolution.org/api/javolution/lang/Configurable.html">Configurable</A> class</LI>
+         </UL>
+         <B>JS</B>cience binary includes the latest <I><B>J</B>avolution</I> classes for the J2SE 1.5+ platform. </TD>
+         </TR>
+         <TR>
+         <TD CLASS="lineheight1 style5" VALIGN="top"><B>JS</B>cience is composed of several OSGi modules
+             (<B>jscience-mathematics, jscience-physics, etc.</B>)
+         <I>Note: <A HREF="http://javolution.org/api/javolution/lang/Configurable.html">Configuration</A>
+         parameters are loaded from system properties at start-up (e.g.
+         <code>-Djavolution.context.ConcurrentContext#MAXIMUM_CONCURRENCY=0</code>
+         would disable concurrency).</I><BR><BR>
+         <A
+            HREF="doc/benchmark.html">Here </A> are the benchmark results
+         on a Dual-Core CPU (T2050) @ 1.60 GHz running Windows XP.
+         </TD>
+         </TR>
+         <TR>
+         <TD CLASS="lineheight1 style5" VALIGN="top"><B>JS</B>cience modules are
+         <A HREF="doc/license.txt">free</A>; permission to use, copy,
+         modify, and distribute these modules is freely granted, provided
+         that copyright notices are preserved.</TD>
+         </TR>
+      </TABLE>
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">Coming in
+            2007: </SPAN></TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+
+<!-- Coming 2007 -->
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="85%">
+         <TR>
+         <TD CLASS="lineheight1 style5">
+         <P>Additional packages for 2011: </P>
+         <UL>
+            <LI>org.jscience.mathematics.transforms (FFT) </LI>
+            <LI>org.jscience.physics.nuclear </LI>
+            <LI>org.jscience.mathematics.integration </LI>
+            <LI>org.jscience.computing.geneticAlgorithms </LI>
+            <LI>org.jscience.cognitive.neural-networks </LI>
+            <LI>org.jscience.statistics.randomizers </LI>
+            <LI>org.jscience.astronomy.ephemeris </LI>
+            <LI>org.jscience.history.calendars </LI>
+            <LI>org.jscience.chemistry.elements </LI>
+            <LI>org.jscience.biology.molecules </LI>
+            <LI>and more... </LI>
+         </UL>
+
+         <P>Feel free to let us know if you are interested in developping
+            new packages. It is very easy: </P>
+         <UL>
+            <LI>Document well </LI>
+            <LI>Integrate with others packages (e.g. physical measures,
+            mathematics numbers, functions etc..) </LI>
+            <LI>License your code under the JScience BSD License. </LI>
+            <LI>Conform to our <A HREF="doc/coding_standard.txt">Coding Standard</A></LI>
+            <LI>Subsribe to the users@jscience.java.net mailing list</LI>
+         </UL>New packages are submitted by entering an enhancement issue at <A HREF="http://java.net/jira/browse/JSCIENCE">
+         java.net</A> and by attaching your code to the issue. Your code will then get reviewed, hopefully approved and integrated. </TD>
+         </TR>
+      </TABLE>
+
+<!-- Links -->
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">Links</SPAN>
+            </TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="93%">
+         <TR>
+         <TD>
+         <UL>
+            <LI CLASS="lineheight1 style5">
+            <IMG src="doc/img/new.gif" /> JavaWorld Article: <A href="http://www.javaworld.com/javaworld/jw-10-2007/jw-10-jsr275.html">"Introduction to JSR-275: Measures and Units"</A></LI>
+
+            <LI CLASS="lineheight1 style5">
+            Book <A href="http://www.wickedcooljava.com/">"Wicked Cool Java"</A>
+            describes the JScience library; along with some sample code that uses the units API).</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://ociweb.com/jnb/jnbJun2006.html">Units and Measures with <B>JS</B>cience</A> -
+            "Java News Brief" Article</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://www.matheclipse.org"><IMG SRC="doc/img/calculator.png"></A>
+            MathEclipse On-Line Calculator powered by <B>JS</B>cience</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://en.wikipedia.org/wiki/JScience"><IMG SRC="doc/img/wikipedia.png"></A>
+            Wikipedia on <B>JS</B>cience</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://geoapi.sourceforge.net/">GeoAPI</A>
+            Provides neutral, interface-only APIs derived from OGC/ISO Standards.</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://jscience.org/jsr-275/jsr-275-bin.zip">jsr-275-bin.zip</A> and
+            <A href="http://jscience.org/jsr-275/jsr-275-src.zip">jsr-275-src.zip</A>
+            Standalone quantities/units packages.</LI>
+
+            <LI CLASS="lineheight1 style5">
+            <A href="http://jade.dev.java.net/">JScience Experimental Packages</A>
+            maintained by <A HREF="mailto:silvere@digitalbiosphere.org">Silvère Martin-Michiellot</A>
+            (<A href="http://jscience.org/experimental/javadoc/">JavaDoc</A>).</LI>
+
+         </UL></TD>
+         </TR>
+      </TABLE>
+
+<!-- History -->
+      <TABLE ALIGN="center" HEIGHT="46" BORDER="0" CELLSPACING="0"
+             BACKGROUND="doc/img/bar_center.jpg" CELLPADDING="0" WIDTH="96%">
+         <TR>
+         <TD WIDTH="6%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_left.jpg" WIDTH="37"></TD>
+         <TD VALIGN="top" WIDTH="92%">
+         <TABLE HEIGHT="27" BORDER="0" CELLSPACING="0" CELLPADDING="0"
+                WIDTH="100%">
+            <TR>
+            <TD VALIGN="bottom" HEIGHT="27"><SPAN CLASS="style4">History</SPAN>
+            </TD>
+            </TR>
+         </TABLE></TD>
+         <TD BGCOLOR="#FFFFFF" WIDTH="2%">
+         <IMG HEIGHT="46" SRC="doc/img/bar_right.jpg" WIDTH="11"></TD>
+         </TR>
+      </TABLE>
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="93%">
+         <TR>
+         <TD>
+         <UL>
+          <LI CLASS="lineheight1 style5"><B>June 20-25, 2011: JScience 5.0</B><BR>
+            Three initial modules released: mathematics, physics and economics</LI>
+
+         <LI CLASS="lineheight1 style5"><B>October 3, 2007: JScience 4.3/4.4</B><BR>
+
+           JavaWorld Article: <A href="http://www.javaworld.com/javaworld/jw-10-2007/jw-10-jsr275.html">Introduction to JSR-275: Measures and Units</A>
+            <OL>
+            <LI> Added <A HREF="api/javax/measure/Decimal.html">Decimal</A> [4.3.0] (renamed from DecimalMeasure) [4.4.0] </LI>
+            <LI> Added <A HREF="api/javax/measure/Vector.html">Vector</A> [4.3.0] (renamed from VectorMeasure) [4.4.0] </LI>
+            <LI> Fixed issues:
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=61">61</A> [4.3.1],
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=32">32</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=33">33</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=34">34</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=38">38</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=39">39</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=41">41</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=55">55</A>,
+            <A HREF="https://jscience.dev.java.net/issues/show_bug.cgi?id=58">58</A>,
+            [4.3.0] </LI>
+            </OL>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>August 27, 2007: JScience 4.2</B><BR>
+
+            <b>JSR-275 Draft Review Actions:</b>
+            <OL>
+            <LI> Add conversion method to Measure class:<CODE>Measure<V, Q>.to(Unit&lt;Q> unit)</CODE></LI>
+            <LI> Add Measure factory method for <CODE>double[]</CODE> and <CODE>BigDecimal</CODE></LI>
+            <LI> Add <CODE>SystemOfUnits</CODE> class.</LI>
+            <LI> Rename <CODE>Unit.getSystemUnit()</CODE> to <CODE>Unit.getStandardUnit()</CODE></LI>
+            <LI> Provide convenience method <CODE>Unit.alternate(String)</CODE></LI>
+            <LI> Add <CODE>MeasureFormat</CODE> (with direct support for CompoundUnit) </LI>
+            <LI> Provide <CODE>UnitFormat.getInstance()</CODE> and <CODE>UnitFormat.getUCUMInstance()</CODE> </LI>
+            <LI> Unit converters A and B are equals if <CODE>A.concatenate(B.inverse())</CODE> is identity.</LI>
+            <LI> Unit.asType(Class) raises a ClassCastException when dimensions mismatch.</LI>
+            </OL>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>June 12, 2007: JScience 4.1</B><BR>
+            Fixed <a href="https://jscience.dev.java.net/issues/show_bug.cgi?id=52">Issue 52</a> (matrix multiplication) [4.1.2]<BR>
+            Upgraded to the latest <a href="http://javolution.org">Javolution</a> V5.1 [4.1.1]<BR>
+            Added <a href="api/org/jscience/mathematics/number/FloatingPoint.html">FloatingPoint</a> numbers of fixed arbitrary precision<BR>
+            Reference implementation for the <A href="https://jsr-275.dev.java.net/files/documents/4333/34956/jsr-275.pdf">JSR-275 : Measures and Units</A><BR>
+            Refactored package/classes to use singular form, <code>org.jscience.physics.measure.Measure</code>
+            renamed <code>org.jscience.physics.amount.Amount</code> (to avoid name clash with <code>javax.measure</code>).<BR>
+            Support for dense or sparse <A HREF="api/org/jscience/mathematics/vector/package-summary.html">vectors</A>.
+            Our <A HREF="doc/benchmark.html">benchmark</A> indicates that on
+            dual-core processors our <code>Matrix&lt;Float64&gt;</code> or <code>Matrix&lt;Complex&gt;</code> multiplications
+            are the fastest around (for a pure Java library), by about 2x!<BR>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>October 5, 2006: JScience 3.2</B><BR>
+            JSR-275 new packaging (javax.measure.*)<BR>
+            Binary for 1.4 (created using <a href="http://retroweaver.sourceforge.net/">Retroweaver</a>) <BR>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>July 15, 2006 : JScience 3.1.6</B><BR>
+            Updated/corrected <A HREF="api/org/jscience/physics/amount/Constants.html">physical constants</A>
+            (<a href="http://physics.nist.gov/cuu/Constants/index.html">CODATA 2002</a>) [3.1.3] <BR>
+            Added <code>RationalConverter</code> for exact unit conversion [3.1.0] <BR>
+            Automatic removal of terms with zero coefficients for polynomials [3.1.0] <BR>
+            Fixed defects 27, 28, 29 (<A HREF="http://jscience.dev.java.net/">java.net</A> issues database) [3.1.0] <BR>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>March 2, 2006 : JScience 3.0</B><BR>
+            Major upgrade of the library to leverage JDK 1.5 class paramaterization capabilities.<BR>
+            Rigourous mapping of mathematical structures (e.g. Group, Ring, Field, etc.)<BR>
+            Fixed defects 17, 19, 20, 21, 25 (<A HREF="http://jscience.dev.java.net/">java.net</A>) [3.0.2] <BR>
+            Added new quantities for flow rate and viscosity [3.0.1] <BR>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B>October 11, 2005 : JScience 2.0</B><BR>
+            Javolution classes included into the JScience binary (.jar)<BR>
+            </LI>
+
+            <LI CLASS="lineheight1 style5"><B> January 26, 2005: JScience 1.0 </B> <BR>
+            Upgrade to Javolution 2.2 [1.0.3] <BR>
+            Upgrade to Javolution 2.0 [1.0.2] <BR>
+            Upgrade to Javolution 1.1 [1.0.1] <BR>
+            Spin-off of <A HREF="http://jade.dautelle.com">Java(TM) Addition to Default Environment </A> [1.0.0]
+            </LI>
+         </UL></TD>
+         </TR>
+      </TABLE>
+      <BR>
+
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="8"
+             WIDTH="92%">
+         <TR>
+         <TD CLASS="lineheight1 style5" VALIGN="middle" ALIGN="center" WIDTH="31%">
+         <DIV ALIGN="center"><A HREF="http://java.net/projects/jscience"><IMG
+               HEIGHT="47" BORDER="0" SRC="doc/img/javanet.gif" WIDTH="170"></A></DIV>
+         </TD>
+         <TD CLASS="lineheight1 style5" WIDTH="55%">
+          Comments      : <A HREF="http://java.net/projects/jscience/lists">Mailing Lists</A><BR>
+          Project Owner : <A HREF="mailto:jean-marie@dautelle.com">Jean-Marie Dautelle </A><BR>
+          Revision      : June 20, 2011<BR>
+         </TD>
+         </TR>
+      </TABLE>
+      <HL>
+      <TABLE ALIGN="center" BORDER="0" CELLSPACING="0" CELLPADDING="4"
+             WIDTH="92%">
+         <TR>
+         <TD><A HREF="http://java.sun.com/">Java</A> is a trademark of
+         <A HREF="http://www.oracle.com/">Oracle</A><BR>
+         Designed by <A HREF="http://members.shaw.ca/ventro2/design/">Ventro</A>
+         </TD>
+         </TR>
+      </TABLE>
+      </TD>
+      <TD BACKGROUND="doc/img/whitelineright.gif" WIDTH="25">
+      <IMG HEIGHT="1" SRC="doc/img/whitelineright.gif" WIDTH="25"></TD>
+      </TR>
+   </TABLE></TD>
+   <TD BACKGROUND="doc/img/body_bgright.gif" WIDTH="11">
+   <IMG HEIGHT="1" SRC="doc/img/body_bgright.gif" WIDTH="11"></TD>
+   </TR>
+</TABLE>
+</BODY>
+</HTML>

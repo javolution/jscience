@@ -1,0 +1,39 @@
+<body>
+<p> Provides support for fairly simple symbolic math analysis
+   (to solve algebraic equations, integrate, differentiate, calculate
+    expressions, and so on).</p>
+    
+<p> {@link org.jscience.mathematics.function.Function Functions} defined in this package
+    can be {@link org.jscience.mathematics.function.Variable multivariate}
+    and operate on various kind of objects such as physical measurements, 
+    vectors, matrices, all types of numbers or even the functions
+    themselves (functions of functions)! 
+    Here is an example using {@link org.jscience.mathematics.number.Complex complex} 
+    {@link org.jscience.mathematics.function.Polynomial polynomial} functions:[code]
+
+        // Defines two local variables (x, y).
+        Variable<Complex> varX = new Variable.Local<Complex>("x");
+        Variable<Complex> varY = new Variable.Local<Complex>("y");
+
+        // f(x) = ix² + 2x + 1
+        Polynomial<Complex> x = Polynomial.valueOf(Complex.ONE, varX);
+        Polynomial<Complex> fx = x.pow(2).times(Complex.I).plus(
+            x.times(Complex.valueOf(2, 0)).plus(Complex.ONE));
+        System.out.println(fx);
+        System.out.println(fx.pow(2));
+        System.out.println(fx.differentiate(varX));
+        System.out.println(fx.integrate(varY));
+        System.out.println(fx.compose(fx));
+
+        // Calculates expression.
+        varX.set(Complex.valueOf(2, 3)); 
+        System.out.println(fx.evaluate());
+
+       > [0.0 + 1.0i]x^2 + [2.0 + 0.0i]x + [1.0 + 0.0i]
+       > [-1.0 + 0.0i]x^4 + [0.0 + 4.0i]x^3 + [4.0 + 2.0i]x^2 + [4.0 + 0.0i]x + [1.0 + 0.0i]
+       > [0.0 + 2.0i]x + [2.0 + 0.0i]
+       > [0.0 + 1.0i]x^2y + [2.0 + 0.0i]xy + [1.0 + 0.0i]y
+       > [0.0 - 1.0i]x^4 + [-4.0 + 0.0i]x^3 + [-2.0 + 6.0i]x^2 + [4.0 + 4.0i]x + [3.0 + 1.0i]
+       > -7.0 + 1.0i
+       [/code]</p>
+</body>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>JScience - Benchmark Results (Microsoft Windows 2000 - Intel Pentium 4 - 2.26 GHz)</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="JScience, benchmark">
+<LINK REL ="stylesheet" TYPE="text/css" HREF="javadoc.css" TITLE="Style">
+</HEAD>
+<BODY><PRE>
+<B>C:\jscience-4.0>ant run</B>
+
+     ...
+run:
+     [java] Version 4.0.0 June 4 2007 (http://jscience.org)
+
+     [java] Benchmark...
+
+     [java] Numerics Operations
+     [java] Float64 add: 16.21 ns
+     [java] Float64 multiply: 19.75 ns
+     [java] Complex add: 22.80 ns
+     [java] Complex multiply: 44.37 ns
+     [java] Amount&lt;Mass&gt; add: 33.02 ns
+     [java] Amount&lt;Mass&gt; multiply: 66.69 ns
+
+     [java] LargeInteger (StackContext) versus BigInteger
+     [java] LargeInteger (1024 bits) addition: 235.9 ns
+     [java] LargeInteger (1024 bits) multiplication: 12.87 us
+<FONT COLOR="999999">     [java] BigInteger (1024 bits) addition: 512.5 ns</FONT>
+<FONT COLOR="999999">     [java] BigInteger (1024 bits) multiplication: 10.32 us</FONT>
+
+     [java] Matrix&lt;Float64&gt; and Matrix&lt;Complex&gt; versus non-parameterized matrix (double)
+<FONT COLOR="999999">     [java] Non-parameterized matrix (double based) 500x500 multiplication: 636.2 ms</FONT>
+     [java] Matrix&lt;Float64&gt; 500x500 multiplication: 230.9 ms
+     [java] Matrix&lt;Complex&gt; 500x500 multiplication: 844.3 ms
+     [java] Matrix&lt;Amount&gt; 500x500 multiplication: 29.02 s
+
+     [java] More performance analysis in future versions...
+
+</PRE></BODY></HTML>

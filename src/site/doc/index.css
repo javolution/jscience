@@ -1,0 +1,58 @@
+.smalltext {
+	font-size: 2px;
+}
+.quote {
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+	color: #60697E;
+	text-decoration: none;
+}
+.lineheight1 {
+	line-height: 16px;
+	font-size: 11px;
+}
+a {
+	font-weight: normal;
+	color: #BC3838;
+	text-decoration: underline;
+}
+a:hover {
+	font-weight: bold;
+	color: #2E3943;
+	text-decoration: none;
+}
+.border1 {
+	border: 1px solid #D5D9E1;
+}
+body {
+	background-image:  url(img/sitebg.gif);
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #506474;
+	text-decoration: none;
+	line-height: 16px;
+}
+
+.style3 {
+	font-family: Verdana;
+	color: #60697E;
+}
+.style4 {
+	font-family: Verdana;
+	font-size: 12px;
+	color: #445157;
+}
+.style5 {
+	font-family: Verdana;
+	color: #506474;
+}
+.style6 {font-family: "Courier New"}
+.style7 {
+	font-size: 12px;
+	color: #212930;
+}

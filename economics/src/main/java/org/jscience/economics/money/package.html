@@ -1,0 +1,112 @@
+<body>
+<p> Provides support for monetary quantities and their currencies.</p>
+
+<p> This module is an extension to the <a href="http://jcp.org/en/jsr/detail?id=275">JSR-275</a>.
+     Money is a quantity that represents a means of payment. Currency is a unit of money,
+     such as USD or CAD. In order to represent a specific amount of money you should use
+     something like DecimalAmount&lt;Money&gt;, Float64Amount&lt;Money&gt; or simply
+     MoneyAmount.</p>
+
+<p>  Money has its own dimension (on top of the 7 standard dimensions in the JSR-275),
+     Currency is a type of Unit, CurrencyConverter is a type of UnitConverter for which
+     conversions value are dynamic (set by the exchange rate) and for which the buying
+     rate and the selling rate can be independantly set.</p>
+
+<p> The economics module can be used directly in conjonction with the JSR-275.
+    [code]
+        Measure<Money> cash = Measure.valueOf(12.52, USD);
+        Measure<Money> price = Measure.valueOf("12.99 $").asType(Money.class);
+        Measure<Money> priceInEuros = price.to(EUR);
+    [/code]</p>
+
+ <p> Money can be combined with others quantities, e.g hourly rate ($/h), weight price ($/Kg), dimensional checks
+     is performed like for any other quantity. You may also perform conversion on these quantities, e.g. $/gal to €/L.
+     Conversions between quantities stated in different currencies is possible if the exchange rate for the currencies
+     has been set. This is an unidirectional setting. Setting the conversion from USD to EUR does not set the
+     conversion rate from EUR to USD.</p>
+    
+<p> Using the physics module, money amounts or combination of money amount and others physical quantities can be operated upon
+    as illustrated here:[code]
+import javax.measure.quantity.Length;
+import javax.measure.unit.Unit;
+import org.jscience.economics.money.Money;
+import org.jscience.economics.money.MoneyAmount;
+import org.jscience.mathematics.number.Float64;
+import org.jscience.physics.amount.Amount;
+import static javax.measure.unit.SI.*;
+import static javax.measure.unit.SI.MetricPrefix.*;
+import static javax.measure.unit.NonSI.*;
+import static org.jscience.economics.money.Currency.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Use currency symbols instead of ISO-4217 codes (only for locale format, see Measure.toStringLocale())
+        USD.setLabel("$"); // Use "$" symbol instead of currency code ("USD")
+        EUR.setLabel("€"); // Use "€" symbol instead of currency code ("EUR")
+
+        // Combination of money and physical quantities.
+        Amount<Float64, ?> carMileage = Amount.valueOf(20.53, MILE.divide(GALLON_LIQUID_US)); // 20.53 mi/gal.
+        Amount<Float64, ?> gazPrice = Amount.valueOf(1.20, EUR.divide(LITRE)); // 1.20 €/L
+        Amount<Float64, Length> tripDistance = Amount.valueOf(400, KILO(METRE)); // 400 km
+        Amount<Float64, Money> tripCost = tripDistance.times(gazPrice).divide(carMileage).asType(Money.class);
+
+        // Locale output (here French Locale).
+        System.out.println(tripCost.toStringLocale()); // 23,38 km·€·gal/(L·mi)
+        System.out.println(tripCost.toSI().toStringLocale()); // 54,994 €
+
+         // Gets the money amount equivalent (conversion of any Amount<?, Money> to a decimal money amount).
+        MoneyAmount expenses = MoneyAmount.valueOf(tripCost);
+        System.out.println(expenses.toStringLocale()); // 54,99 € (money format, 2 fractional digits for EUR).
+
+        // Currency conversions.
+        EUR.setExchangeRate(1.40, USD); // Allows conversion from EUR to USD
+        System.out.println(tripCost.to(USD)); // 76.99181685338527 USD (standard measure format independant from Locale)
+
+        // Creates a new unit km/L.
+        Unit  kmPerLiter = KILO(METRE).divide(LITRE);
+        System.out.println(carMileage.to(kmPerLiter).toStringLocale()); // 8,728 km/L
+
+         // Gets the cash left in USD.
+        MoneyAmount cash = MoneyAmount.valueOf(121, 15, USD); // 121.15 $
+        USD.setExchangeRate(0.63, EUR); // We need to allow conversion from USD to EUR.
+        MoneyAmount leftCash = cash.minus(expenses);
+        System.out.println(leftCash.toStringLocale()); // 44,15 $ (money format, 2 fractional digits for USD).
+
+    }
+}
+[/code]</p>
+
+<p> The exchange rates between {@link org.jscience.economics.money.Currency currencies} 
+    is {@link javolution.context.LocalContext context local}. 
+    Applications may use different sets of exchange rates concurrently. Furthermore,
+    rates for buying and rates for selling may be different. For example:[code]
+        LocalContext.enter(); 
+        try {
+            EUR.setExchangeRate(1.4505, USD);  // EUR to USD (local rate)
+            MoneyAmount price = MoneyAmount.valueOf(9, 99, EUR);
+            System.out.println("Price: " + price.to(USD);
+        } finally {
+            LocalContext.exit();
+        }
+        ...
+        LocalContext.enter(); 
+        try {
+            USD.setExchangeRate(0.6643, EUR);  // USD to EUR (local rate)
+            MoneyAmount price = MoneyAmount.valueOf(14, 99, USD);
+            System.out.println("Price: " + price.to(EUR);
+        } finally {
+            LocalContext.exit();
+        }[/code]</p>
+        
+<p> Like any {@link org.jscience.physics.amount.Amount amount},
+    money quantities can be used with any number type.
+    [code]
+        // Calculates trip cost using Decimal numbers.
+        Amount<Decimal, ?>      carMileage   = DecimalAmount.valueOf("20.53", MILE.divide(GALLON_LIQUID_US)); // 20.53 mi/gal.
+        Amount<Decimal, ?>      gazPrice     = DecimalAmount.valueOf("1.20", EUR.divide(LITER)); // 1.20 €/L
+        Amount<Decimal, Length> tripDistance = DecimalAmount.valueOf("400", KILO(METRE)); // 400 km
+        Amount<Decimal, Money>  tripCost     = tripDistance.times(gazPrice).divide(carMileage).asType(Money.class);
+    [/code]</p>
+</body>

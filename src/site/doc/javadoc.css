@@ -1,0 +1,60 @@
+/*
+ * JScience - Java(TM) Tools and Libraries for the Advancement of Sciences.
+ * Copyright (C) 2005 - JScience (http://jscience.org/)
+ * All rights reserved.
+ * 
+ * Permission to use, copy, modify, and distribute this software is
+ * freely granted, provided that this notice is preserved.
+ */
+
+/* Define colors, fonts and other style attributes here to override the defaults */
+
+/* Page background color */
+body { 
+    background-color: #F0F1F3;
+    font-family: Verdana;
+	color: #506474;
+	font-size: 14px;
+}
+
+/* Headings */
+
+a {
+	color: #BC3838;
+	text-decoration: none;
+}
+a:hover {
+	color: #2E3943;
+	text-decoration: underline;
+}
+
+.style0 {
+	font-family: Verdana;
+	font-size: 22px;
+	color: #B60606;
+}
+.style1 {
+	font-family: Verdana;
+	font-size: 22px;
+	color: #506474;
+}
+
+/* Table colors */
+.TableHeadingColor     { background: #E5E8EC } 
+.TableSubHeadingColor  { background: #E5E8EC }
+.TableRowColor         { background: #D5D9E1 } 
+
+/* Font used in left-hand frame lists */
+.FrameTitleFont   { font-size: 120%; font-family: Verdana }
+.FrameHeadingFont { font-size: 100%; font-family: Verdana }
+.FrameItemFont    { font-size: 100%; font-family: Verdana }
+
+/* Navigation bar fonts and colors */
+.NavBarCell1    { background-color:#E5E8EC }
+.NavBarCell1Rev { background-color:#BC3838 } 
+.NavBarFont1    { font-family:  Verdana; color:#506474;;}
+.NavBarFont1Rev { font-family:  Verdana; color:#FFFFFF;}
+
+.NavBarCell2    { font-family:  Verdana; background-color:#E5E8EC;}
+.NavBarCell3    { font-family:  Verdana; background-color:#E5E8EC;}
+
